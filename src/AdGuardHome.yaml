@@ -92,14 +92,58 @@ tls:
   certificate_path: ""
   private_key_path: ""
 filters:
-  - enabled: true
+    - enabled: true
     url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
     name: AdGuard DNS filter
     id: 1
-  - enabled: false
+    - enabled: true
     url: https://adaway.org/hosts.txt
     name: AdAway Default Blocklist
     id: 2
+    - enabled: true
+    url: https://someonewhocares.org/hosts/zero/hosts
+    name: Dan Pollock's List
+    id: 1664546502
+    - enabled: true
+    url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+    name: Game Console Adblock List
+    id: 1664546503
+    - enabled: true
+    url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
+    name: Perflyst and Dandelion Sprout's Smart-TV Blocklist
+    id: 1664546504
+    - enabled: true
+    url: https://abp.oisd.nl/basic/
+    name: OISD Blocklist Basic
+    id: 1664546505
+    - enabled: true
+    url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+    name: Peter Lowe's List
+    id: 1664546506
+    - enabled: true
+    url: https://anti-ad.net/easylist.txt
+    name: 'CHN: anti-AD'
+    id: 1664546507
+    - enabled: true
+    url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+    name: WindowsSpyBlocker - Hosts spy rules
+    id: 1664546508
+    - enabled: true
+    url: https://gist.githubusercontent.com/Ewpratten/a25ae63a7200c02c850fede2f32453cf/raw/b9318009399b99e822515d388b8458557d828c37/hosts-yt-ads
+    name: youtube
+    id: 1664555268
+    - enabled: true
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+    name: cnad
+    id: 1664754964
+    - enabled: true
+    url: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+    name: cnvideoad
+    id: 1664754966
+    - enabled: true
+    url: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds-Ultra.txt
+    name: GoodbyeAds
+    id: 1664754967
 whitelist_filters: []
 user_rules: []
 dhcp:

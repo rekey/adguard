@@ -12,7 +12,7 @@ fi
 mkdir -p /opt/work
 mkdir -p /opt/conf
 
-if [ ! -f /opt/conf ]; then
+if [ ! -f /opt/conf/AdGuardHome.yaml ]; then
     cp /opt/AdGuardHome.yaml /opt/conf/AdGuardHome.yaml
 fi
 
