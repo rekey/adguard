@@ -17,7 +17,7 @@ services:
         depends_on:
             - doh
         volumes:
-            - ./adguard/data:/opt/work
+            - ./adguard/data:/opt/work/data
             - ./adguard/config:/opt/conf
             - ./doh/data:/opt/pem
         ports:
