@@ -7,7 +7,7 @@ services:
         environment:
             - ssl=dns.ja
         volumes:
-            - ./data:/app/store
+            - ./doh/data:/app/store
     adguard:
         image: rekey/adguard
         restart: unless-stopped
@@ -17,9 +17,9 @@ services:
         depends_on:
             - doh
         volumes:
-            - ./adguard/data:/opt/adguardhome/work
-            - ./adguard/config:/opt/adguardhome/conf
+            - ./adguard/data:/opt/work
+            - ./adguard/config:/opt/conf
+            - ./doh/data:/opt/pem
         ports:
-            - 3000:3000
-            - 3001:3001
+            - 80:80
             - 53:53/udp

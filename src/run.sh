@@ -4,7 +4,7 @@ sleep 1s
 
 if [ -f /opt/pem/cert.pem ]; then
     if [ ! -f /usr/local/share/ca-certificates/cert.pem ]; then
-        cp /opt/AdGuardHome/data/cert.pem /usr/local/share/ca-certificates/cert.pem
+        cp /opt/pem/cert.pem /usr/local/share/ca-certificates/cert.pem
         update-ca-certificates
     fi
 fi
