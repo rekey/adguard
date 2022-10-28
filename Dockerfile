@@ -2,7 +2,7 @@ FROM  alpine
 LABEL maintainer="Rekey <rekey@me.com>"
 
 WORKDIR /opt/
-add ./run.sh /opt/
+add ./src/* /opt/
 RUN sed -i "s@dl-cdn.alpinelinux.org/@repo.huaweicloud.com/@g" /etc/apk/repositories && \
     apk update && \
     apk add curl ca-certificates bind-tools && \

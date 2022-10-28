@@ -9,5 +9,12 @@ if [ -f /opt/pem/cert.pem ]; then
     fi
 fi
 
+mkdir -p /opt/work
+mkdir -p /opt/conf
+
+if [ ! -f /opt/conf ]; then
+    cp /opt/AdGuardHome.yaml /opt/conf/AdGuardHome.yaml
+fi
+
 cd /opt/AdGuardHome/
-./AdGuardHome -w /opt/adguardhome/work -c /opt/adguardhome/conf/AdGuardHome.yaml
+./AdGuardHome -w /opt/work -c /opt/conf/AdGuardHome.yaml
