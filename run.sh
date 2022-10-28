@@ -1,6 +1,8 @@
 #!/bin/sh
 
-if [ -f /opt/AdGuardHome/data/cert.pem ]; then
+sleep 1s
+
+if [ -f /opt/pem/cert.pem ]; then
     if [ ! -f /usr/local/share/ca-certificates/cert.pem ]; then
         cp /opt/AdGuardHome/data/cert.pem /usr/local/share/ca-certificates/cert.pem
         update-ca-certificates
@@ -8,4 +10,4 @@ if [ -f /opt/AdGuardHome/data/cert.pem ]; then
 fi
 
 cd /opt/AdGuardHome/
-./AdGuardHome
+./AdGuardHome -w /opt/adguardhome/work -c /opt/adguardhome/conf/AdGuardHome.yaml

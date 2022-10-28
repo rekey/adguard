@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+    doh:
+        image: rekey/doh:tls
+        restart: unless-stopped
+        container_name: doh
+        environment:
+            - ssl=dns.ja
+        volumes:
+            - ./data:/app/store
+    adguard:
+        image: rekey/adguard
+        restart: unless-stopped
+        container_name: adguard
+        links:
+            - doh:dns.ja
+        depends_on:
+            - doh
+        volumes:
+            - ./adguard/data:/opt/adguardhome/work
+            - ./adguard/config:/opt/adguardhome/conf
+        ports:
+            - 3000:3000
+            - 3001:3001
+            - 53:53/udp
