@@ -16,5 +16,5 @@ if [ ! -f /opt/conf/AdGuardHome.yaml ]; then
     cp /opt/AdGuardHome.yaml /opt/conf/AdGuardHome.yaml
 fi
 
-cd /opt/AdGuardHome/
+cd /opt/adguardhome
 ./AdGuardHome -w /opt/work -c /opt/conf/AdGuardHome.yaml
