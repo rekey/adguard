@@ -9,4 +9,4 @@ RUN sed -i "s@dl-cdn.alpinelinux.org/@repo.huaweicloud.com/@g" /etc/apk/reposito
     chmod +x /opt/run.sh
 
 ENTRYPOINT ["/opt/run.sh"]
-CMD ["./run.sh"]
+CMD []
